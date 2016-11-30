@@ -37,12 +37,13 @@ body {
 
 /* Remove margins and padding from the list, and add a black background color */
 ul.topnav {
-     list-style-type: none;
+    list-style-type: none;
     margin: 0;
     padding: 10px;
     width: 100%;
     display: inline-block;
-   
+    
+  
 }
 
 /* Float the list items side by side */
@@ -50,6 +51,7 @@ ul.topnav li {
 	margin: 10;
     padding: 10;
     display: inline;
+    
   }
 
 /* Style the links inside the list items */
@@ -57,10 +59,13 @@ ul.topnav li a {
     display: inline-block;
     color: #f2f2f2;
     text-align: center;
+   
     padding: 14px 16px;
     text-decoration: none;
     transition: 0.3s;
     font-size: 40px;
+   
+	
 }
 
 /* Change background color of links on hover */
@@ -95,6 +100,7 @@ ul.topnav li.icon {display: none;}
     text-align: left;
     z-index : 1;
   }
+ 
 
     </style>
 
@@ -129,34 +135,41 @@ ul.topnav li.icon {display: none;}
 
 <body>
 
-<ul class="topnav" id="myTopnav">
-  <li><a href="index.html"><img class="img-responsive" width="60px" src="imagenes/botones/logo_hera.png" /></a></li>
-  <li><a href="doctores.html"><img class="img-responsive" width="180px" src="imagenes/botones/doctores_boton.png" /></a></li>
-  <li><a href="#news"><img class="img-responsive" width="180px" src="imagenes/botones/hospitales_boton.png" /></a></li>
-  <li><a href="#news"><img class="img-responsive" width="180px" src="imagenes/botones/farmacias_boton.png" /></a></li>
-  <li><a href="#news"><img class="img-responsive" width="180px" src="imagenes/botones/laboratorios_boton.png" /></a></li>
-  
-  <li class="icon">
-    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
-  </li>
-</ul>
+<div class="links">
+        <ul class="topnav" id="myTopnav" >
+      <li><a href="index.html"><img class="img-responsive" width="60px" src="imagenes/botones/logo_hera.png" /></a></li>
+      <li><a href="doctores.html"><img class="img-responsive" width="180px" src="imagenes/botones/doctores_boton.png" /></a></li>
+      <li><a href="#news"><img class="img-responsive" width="180px" src="imagenes/botones/hospitales_boton.png" /></a></li>
+      <li><a href="#news"><img class="img-responsive" width="180px" src="imagenes/botones/farmacias_boton.png" /></a></li>
+      <li><a href="#news"><img class="img-responsive" width="180px" src="imagenes/botones/laboratorios_boton.png" /></a></li>
+      <li class="icon">
+        <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+      </li>
+    </ul>
+    </div>
 
 
-<div class="container">
+   <div class="container">
   <div class="row">
     
      
-      <div class="col-sm-12 col-md-10 col-md-offset-1">
-              <div style="color:#ffffff"><h2>Ayudemos y colaboremos con la Comunidad.</h2>
-
-<H4>Recomienda doctores o instituciones para que otros se enteren y puedan acceder a ellos.
-
-Busca a los doctores, hospitales, farmacias y laboratorios más recomendados en el país,
-
-tu estado o ciudad.</H4> </div>
+      <div class="col-sm-12 col-md-10 col-md-offset-1" align="center">
+              <a href="index.html"><img class="img-responsive"  src="imagenes/botones/doctores_boton.png" /></a>
+  
+              <button type="button" class="btn btn-default">BUSCAR</button>
+        
+      
+              <button type="button" class="btn btn-default">OPINAR</button>
       </div>  
      
   </div>
+  
+    
+     
+      
+      <br>
+     
+ 
 </div>
 
 
