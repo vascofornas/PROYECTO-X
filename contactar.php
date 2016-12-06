@@ -3,23 +3,7 @@
 if( $_POST ){
 	
 
-	$especialidad_doctor = $_POST['especialidad_doctor'];
-    $nombre_doctor = $_POST['nombre_doctor'];
-    $apellidos_doctor = $_POST['apellidos_doctor'];
-    $pais_doctor = $_POST['pais_doctor'];
-    $estado_doctor = $_POST['estado_doctor'];
-    $ciudad_doctor = $_POST['ciudad_doctor'];
- 
-    $direccion_doctor = $_POST['direccion_doctor'];
-  
-    $tel_doctor = $_POST['tel_doctor'];
-   
-    $puntualidad = $_POST['puntualidad'];
-    $precio = $_POST['precio'];
-    $instalaciones = $_POST['instalaciones'];
-    $atencion = $_POST['atencion'];
-    $recomendarias = $_POST['recomendarias'];
-    $eficiencia = $_POST['eficiencia'];
+	
     $comentarios = $_POST['comentarios'];
     $nombre_usuario = $_POST['nombre_usuario'];
     $email_usuario = $_POST['email_usuario'];
@@ -81,69 +65,25 @@ $codigo = generateRandomString(10);
 
 
 
-$statement = $link->prepare("INSERT INTO tb_opiniones_doctor(especialidad_doctor,nombre_doctor,apellidos_doctor,direccion_doctor,
-		atencion,instalaciones,precio,puntualidad,lo_recomiendas,comentarios,nombre_usuario,email_usuario,ip_usuario,pais_doctor,estado_doctor,
-		ciudad_doctor,codigo_verificacion,eficiencia,tel_doctor)
-    VALUES(:fespecialidad,:fnombre_doctor,:fapellidos,:fdireccion,:fatencion,:finstalaciones,:fprecio,:fpuntualidad,:flo_recomiendas,
-		:fcomentarios,:fnombre_usuario,:femail_usuario,:fip,:fpais,:festado,:fciudad,:fcodigo,:feficiencia,:ftel)");
+$statement = $link->prepare("INSERT INTO tb_contacto(comentarios,nombre_usuario,email_usuario,ip_usuario,codigo)
+    VALUES(
+		:fcomentarios,:fnombre_usuario,:femail_usuario,:fip,:fcodigo)");
 $statement->execute(array(
-		"fespecialidad" => $especialidad_doctor,
-		"fnombre_doctor" => $nombre_doctor,
-		"fapellidos" => $apellidos_doctor,
-		"fdireccion" => $direccion_doctor,
-		"fatencion" => $atencion,
-		"finstalaciones" => $instalaciones,
-
-		"fprecio" => $precio,
-		"fpuntualidad" => $puntualidad,
-
-		"flo_recomiendas" => $recomendarias,
-
-		"fcomentarios" => $comentarios,
+				"fcomentarios" => $comentarios,
 
 		"fnombre_usuario" => $nombre_usuario,
 		"femail_usuario" => $email_usuario,
 		"fip" => $ipaddress,
-		"fpais" => $pais_doctor,
-		"festado" => $estado_doctor,
-		"fciudad" => $ciudad_doctor,
-
 		"fcodigo" => $codigo,
-
-		"feficiencia" => $eficiencia,
-		"ftel" => $tel_doctor,
 		
 		
 ));
-
-
-$statement1 = $link->prepare("INSERT INTO tb_doctores
-		(nombre_doctor,apellidos_doctor,pais_doctor,estado_doctor,ciudad_doctor,tel_doctor,
-		especialidad_doctor,direccion_doctor,codigo_doctor
-		)
-    VALUES(:fnombre,:fapellidos,:fpais,:festado,:fciudad,:ftel,
-		:fespecialidad,:fdireccion,:fcodigo)");
-$statement1->execute(array(
-		
-		"fespecialidad" => $especialidad_doctor,
-		"fnombre" => $nombre_doctor,
-		"fapellidos" => $apellidos_doctor,
-		"fpais" => $pais_doctor,
-		"festado" => $estado_doctor,
-		"fciudad" => $ciudad_doctor,
-		"ftel" => $tel_doctor,
-		"fespecialidad" => $especialidad_doctor,
-		"fdireccion" => $direccion_doctor,
-		
-		"fcodigo" => $codigo,
-));
-
 
 
 
 
 $to = $email_usuario;
-$subject = 'Tu opinión ha sido registrada';
+$subject = 'Tu mensaje ha sido recibido';
 $from = 'admin@herasalud.com';
 
 // To send HTML mail, the Content-type header must be set
@@ -158,11 +98,9 @@ $headers .= 'From: '.$from."\r\n".
 // Compose a simple HTML email message
 $message = '<html><body>';
 $message .= '<h1 style="color:#f40;">Hola '.$nombre_usuario.'!</h1>';
-$message .= '<p style="color:#080;font-size:18px;">Gracias por opinar en herasalud.com</p>';
-$message .= '<p>Una vez validada tu dirección email, procederemos a publicar tu opinión en herasalud.com</p><br>';
+$message .= '<p style="color:#080;font-size:18px;">Gracias por contactarnos en herasalud.com</p>';
+$message .= '<p>En breve contestaremos tu consulta</p><br>';
 
-
-$message .= '<center><a href="http://herasalud.com/confirmar_email1.php?cod='.$codigo.'"><button type="button">VALIDAR EMAIL</button></a><br>';
 $message .= '<p>Saludos</p><br>';
 $message .= '<p><strong>El equipo de HeraSalud</strong></p><br>';
 $message .= '<a href="herasalud.com"><img width="50px" src="herasalud.com/imagenes/botones/logo_hera.png" ></a></center>';
@@ -170,14 +108,14 @@ $message .= '</body></html>';
 
 // Sending email$message .= '<p>Para validar tu dirección email, favor de hacer click en el botón</p><br>';
 if(mail($to, $subject, $message, $headers)){
-	echo 'Te hemos enviado un email para verificar tu dirección email.';
+	echo 'Te hemos enviado un email para confirmar el envio de tu consulta.';
 } else{
 	echo 'Unable to send email. Please try again.';
 }
 
 $administrador = 'admin@herasalud.com';
 $to = $administrador;
-$subject = 'OPINION registrada CODIGO:==>'.$codigo;
+$subject = 'CONTACTO EN HERASALUD.COM';
 $from = 'admin@herasalud.com';
 
 // To send HTML mail, the Content-type header must be set
@@ -193,7 +131,7 @@ $headers .= 'From: '.$from."\r\n".
 $message = '<html><body>';
 $message .= '<h3 style="color:#f40;">Usuario '.$nombre_usuario.' !</h3>';
 $message .= '<h3 style="color:#f40;">Email '.$email_usuario.' !</h3>';
-$message .= '<h3 style="color:#f40;">Codigo '.$codigo.' !</h3>';
+$message .= '<h3 style="color:#f40;">Comentarios: '.$comentarios.' !</h3>';
 
 $message .= '</body></html>';
 
@@ -215,7 +153,7 @@ if(mail($to, $subject, $message, $headers)){
     <tr>
     <td colspan="2">
     	<div class="alert alert-info">
-    		<strong>OPINION REGISTRADA</strong>, Gracias por dar tu opinión. En menos de 48 horas validaremos tu email y publicaremos tu opinión.
+    		<strong>FORMULARIO DE CONTACTO RECIBIDO</strong>, Gracias por contactar con nosotros. En breve nos pondremos en contacto contigo.
     	</div>
     </td>
     </tr>
@@ -246,16 +184,12 @@ if(mail($to, $subject, $message, $headers)){
     
     // Compose a simple HTML email message
     $message = '<html><body>';
-    $message .= '<h1 style="color:#f40;">El usuario '.$nombre_usuario.' ha enviado una opinion a HERA!</h1>';
+    $message .= '<h1 style="color:#f40;">El usuario '.$nombre_usuario.' ha enviado el formulario de contacto!</h1>';
+    $message .= '<h1 style="color:#f40;">COMENTARIOS '.$comentarios.' !</h1>';
     $message .= '<h1 style="color:#f40;">CODIGO '.$codigo.' !</h1>';
     
     $message .= '</body></html>';
     
-    // Sending email
-    if(mail($to, $subject, $message, $headers)){
-    
-    } else{
-    
-    }
+  
 	
 }

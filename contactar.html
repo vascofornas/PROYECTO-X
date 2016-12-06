@@ -18,17 +18,8 @@
     <style>
     
 
-
 html, body{
   height: 100%;
-}
-#footer {
-   position:fixed;
-   left:0px;
-   bottom:0px;
-   height:30px;
-   width:100%;
-   background:#999;
 }
 body { 
 			background-image: url(imagenes/fondo_hera.png) ;
@@ -109,7 +100,6 @@ ul.topnav li.icon {display: none;}
     text-align: left;
     z-index : 1;
   }
-  #form-content{float:left;}
  
 
     </style>
@@ -156,7 +146,7 @@ $('#reg-form').submit(function(e){
     e.preventDefault(); // Prevent Default Submission
   
     $.ajax({
- url: 'nuevo_doctor.php',
+ url: 'contactar.php',
  type: 'POST',
  data: $(this).serialize(), // it will serialize the form data
         dataType: 'html'
@@ -202,7 +192,7 @@ $('#reg-form').submit(function(e){
     </ul>
     </div>
 
-<div class="container">
+
  
   <div class="row"><!-- row 001 -->
     
@@ -210,14 +200,14 @@ $('#reg-form').submit(function(e){
       <div class="col-sm-12 col-md-10 col-md-offset-1">
               <div style="color:#ffffff">
 
-				<H4>Wow, nos encanta que quieras compartir tu opinión. Por favor llena los campos con la información del Doctor que vas a evaluar. 
+				<H4>Nos encanta que quieras contactar con nosotros. Por favor llena los campos con tus datos y los motivos de tu consulta. 
 				</H4> 
 			</div>
       </div>
  </div><!-- row 001 -->
       
       
-    <div id="form-content" > 
+    <div id="form-content"> 
     
 			     
 			      <div class="col-sm-12 col-md-10 col-md-offset-1">
@@ -226,173 +216,41 @@ $('#reg-form').submit(function(e){
 			              
 			    <form method="post" id="reg-form" name="form1"  >     
 			    <div class="container">
-			    <div class="row" >
-			        <div class="col-sm-12 col-lg-6" >
-			            <div class="form-group">
-			        <label for="inputEmail">¿Cuál es la especialidad del doctor? 
-			</label>
-			        <input type="text" class="form-control" id="especialidad_doctor" name="especialidad_doctor" placeholder="Especialidad del doctor" required>
-			    </div>
-			    </div>
-			    <div class="col-sm-12 col-lg-6" >
+			   <div class="row">
+			    <div class="col-sm-12 col-lg-12" >
 			    <div class="form-group">
-			        <label for="inputEmail">¿Cómo se llama el doctor? 
+			        <label for="inputEmail">¿Cómo te llamas? 
 			</label>
-			        <input type="text" class="form-control" id="nombre_doctor" name="nombre_doctor" placeholder="Nombre del doctor" required>
+			        <input type="text" class="form-control" id="nombre_usuario" name="nombre_usuario" placeholder="Tu nombre" >
 			    </div>  
 			    </div>
-			        
-			    </div>
+			        </div>
 			    
 			    
 			       <div class="row">
-			        <div class="col-sm-12 col-lg-6" >
-			            <div class="form-group">
-			        <label for="inputEmail">¿Te sabes sus apellidos? 
-			 
-			</label>
-			        <input type="text" class="form-control" id="apellidos_doctor" name="apellidos_doctor" placeholder="Apellidos del doctor" required>
-			    </div>
-			    </div>
-			    <div class="col-sm-12 col-lg-6" >
-			    <div class="form-group">
-			        <label for="inputEmail">¿En qué país reside? 
-			 
-			</label>
-			        <input type="text" class="form-control" id="pais_doctor" name="pais_doctor" placeholder="Pais del doctor" required>
-			    </div>  
-			    </div>
-			        
-			    </div>
-			         <div class="row" >
-			        <div class="col-sm-12 col-lg-6" >
-			            <div class="form-group">
-			        <label for="inputEmail">¿El estado o provincia? 
-			 
-			 
-			</label>
-			        <input type="text" class="form-control" id="estado_doctor" name="estado_doctor" placeholder="Estado o provincia del doctor" required >
-			    </div>
-			    </div>
-			    <div class="col-sm-12 col-lg-6" >
-			    <div class="form-group">
-			        <label for="inputEmail">¿La ciudad o municipio?  
-			</label>
-			        <input type="text" class="form-control" id="ciudad_doctor" name="ciudad_doctor" placeholder="Ciudad o municipio del doctor" required>
-			    </div>  
-			    </div>
-			        
-			    </div>
-			    
-			    <div class="row" >
 			        <div class="col-sm-12 col-lg-12" >
 			            <div class="form-group">
-			        <label for="inputEmail">Nos indicas la calle y número por favor. Si no te lo sabes deja el espacio en blanco 
-			</label>
-			        <input type="text" class="form-control" id="direccion_doctor" name="direccion_doctor"  placeholder="Direccion del doctor">
-			    </div>
-			    </div>
-			    
-			        
-			    </div>
-			    
-			        <div class="row" >
-			    
-			        <div class="col-sm-12 col-lg-6" >
-			            <div class="form-group">
-			        <label for="inputEmail">¿El teléfono del consultorio? 
+			        <label for="inputEmail">¿Cual es tu email? 
 			 
 			</label>
-			        <input type="text" class="form-control" id="tel_doctor" name="tel_doctor" placeholder="Teléfono del consultorio" required>
+			        <input type="email" class="form-control" id="email_usuario" name="email_usuario" placeholder="Tu email">
 			    </div>
 			    </div>
-			   
-			        
 			    </div>
-			    
-			    <div class="row" align="center">
-			    
-			        <div class="col-sm-12 col-lg-4" >
-			            <div class="form-group">
-			         <label for="inputEmail">Puntualidad</label>
-			        <input id="puntualidad" name="puntualidad" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm" data-rtl="false" required>
-			
-			    </div>
-			    </div>
-			    <div class="col-sm-12 col-lg-4" >
-			    <div class="form-group">
-			        <label for="inputEmail">Precio</label>
-			        <input id="precio" name="precio" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm" data-rtl="false" required>
-			
-			    </div>  
-			    </div>
-			    <div class="col-sm-12 col-lg-4" >
-			    <div class="form-group">
-			        <label for="inputEmail">Lo recomendarías</label>
-			        <input id="recomendarias" name="recomendarias" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm" data-rtl="false" required>
-			
-			    </div>  
-			    </div>        
-			    </div>
-			      
-			    <div class="row" align="center">
-			    <br>
-			        <div class="col-sm-12 col-lg-4" >
-			            <div class="form-group">
-			         <label for="inputEmail">Instalaciones</label>
-			        <input id="instalaciones" name="instalaciones" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm" data-rtl="false" required>
-			
-			    </div>
-			    </div>
-			    <div class="col-sm-12 col-lg-4" >
-			    <div class="form-group">
-			        <label for="inputEmail">Atención</label>
-			        <input id="atencion" name="atencion" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm" data-rtl="false" required>
-			
-			    </div>  
-			    </div>
-			    <div class="col-sm-12 col-lg-4" >
-			    <div class="form-group">
-			        <label for="inputEmail">Eficiencia. ¿Te curó?</label>
-			        <input id="eficiencia" name="eficiencia" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm" data-rtl="false" required>
-			
-			    </div>  
-			    </div>        
-			    </div>
-			    <div class="row" align="center">
+			    <div class="row">
 			    <br>
 			        <div class="col-sm-12 col-lg-12" >
 			            <div class="form-group">
-			        <label for="inputEmail">Por favor, comparte tu experiencia</label>
-			        <textarea rows="4"   class="form-control" id="comentarios" name="comentarios" placeholder="Escribe aqui tu experiencia con el doctor"  required></textarea>
+			        <label for="inputEmail">Por favor, escribe tu consulta</label>
+			        <textarea rows="4"   class="form-control" id="comentarios" name="comentarios" placeholder="Escribe aqui tu experiencia con el doctor" ></textarea>
 			    </div>
 			    </div>
 			        
 			    </div>
-			    <div class="row" align="center">
-			    <br>
-			        <div class="col-sm-12 col-lg-12" >
-			            <div class="form-group">
-			        <label for="inputEmail">¿Tu nombre de usuario?
-			</label>
-			        <input type="text" class="form-control" id="nombre_usuario" name="nombre_usuario" placeholder="Nombre de usuario" required>
-			    </div>
-			    </div>
-			    <div class="col-sm-12 col-lg-12" >
-			    <div class="form-group">
-			        <label for="inputEmail">Nos indicas tu mail para confirmar que tu opinión esta siendo procesada,  puedes estar seguro que esté permanecerá en estricta privacidad y que nunca se publicará 
-			</label>
-			        <input type="email" class="form-control" id="email_usuario" name="email_usuario"placeholder="Tu email" required>
-			    </div>  
-			    </div>
-			        
-			    </div>
-				</div>
-			        
-			        
+			  
 			        
 			  
-			    <button type="submit" class="btn btn-primary">Enviar opinión</button>
+			    <button type="submit" class="btn btn-primary">Enviar</button>
 			</form>
 			 </div>
 			  </div>
@@ -400,10 +258,7 @@ $('#reg-form').submit(function(e){
 			  
 </div>
 
-</div>
 
-<div class="footer"><a href="contactar.html">Contactar</a> | <a href="condiciones_uso.html">Condiciones de Uso</a></div>
- 
        
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>

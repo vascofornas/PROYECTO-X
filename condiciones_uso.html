@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>HERA</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    
+
+html, body{
+  height: 100%;
+}
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#999;
+}
+body { 
+			background-image: url(imagenes/fondo_hera.png) ;
+			background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+			background-color: #999;
+			text-align: center;
+  			text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  
+  
+}
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#999;
+}
+
+
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+     list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    display: inline-block;
+   
+}
+
+/* Float the list items side by side */
+ul.topnav li {
+	margin: 10;
+    padding: 10;
+    display: inline;
+  }
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 40px;
+}
+
+/* Change background color of links on hover */
+/* ul.topnav li a:hover {background-color: #fff;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+  float: right;
+    margin-right: 10%;
+    display: inline-block !important;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+    z-index : 1;
+  }
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<head>
+  <title>Hera</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+  function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+          x.className += " responsive";
+      } else {
+          x.className = "topnav";
+      }
+  }
+  
+  </script>
+</head>
+</head>
+
+<body>
+
+<ul class="topnav" id="myTopnav">
+  <li><a href="index.html"><img class="img-responsive" width="60px" src="imagenes/botones/logo_hera.png" /></a></li>
+  <li><a href="doctores.html"><img class="img-responsive" width="180px" src="imagenes/botones/doctores_boton.png" /></a></li>
+  <li><a href="#news"><img class="img-responsive" width="180px" src="imagenes/botones/hospitales_boton.png" /></a></li>
+  <li><a href="#news"><img class="img-responsive" width="180px" src="imagenes/botones/farmacias_boton.png" /></a></li>
+  <li><a href="#news"><img class="img-responsive" width="180px" src="imagenes/botones/laboratorios_boton.png" /></a></li>
+  
+  <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+  </li>
+</ul>
+
+
+<div class="container">
+  <div class="row">
+    
+     
+      <div class="col-sm-12 col-md-10 col-md-offset-1" align="left">
+              <div style="color:#ffffff"><h2>Condiciones de Uso</h2>
+
+<p>La información proporcionada en www.herasalud.com ha sido planteada para apoyar, no reemplazar, la relación que existe entre un paciente/visitante de este sitio web y su médico.</p>
+<p>
+Las presentes Condiciones Generales contienen la descripción detallada del funcionamiento del presente sitio web, propiedad de HERA INTERNET, S.L., y regulan las relaciones entre HERA INTERNET, S.L. y el usuario del sitio web.</p>
+<p>1.- <strong>Quien puede ser usuario del presente sitio web, creado por HERA INTERNET, S.L.</strong> Puede ser usuario de este sitio web toda persona física independientemente de su nacionalidad o país de residencia, siempre que haya aceptado expresamente las presentes Condiciones Generales.
+Se entienden expresamente aceptadas por el usuario las presentes Condiciones Generales en su totalidad por el hecho de utilizar este sitio web.
+Todo usuario que haya aceptado íntegramente las presentes Condiciones Generales puede acceder a la información contenida en la presente página web creada por HERA INTERNET, S.L.</p>
+<p>2.- <strong>Contratación por el usuario de los productos y servicios ofrecidos a través del presente sitio web.</strong>
+La misión de este sitio web de HERA INTERNET, S.L., es la creación y gestión de un directorio que incluya especialistas médicos y centros médicos que permitan a los usuarios de este sitio web acceder a información relativa a aquellos médicos y centros médicos (en adelante "cliente") de HERA INTERNET, S.L., tales como fotografías, planos de situación, currículum vitae, audio, video o cualquier otra información relativa a los mismos que el propio médico o centro médico considere oportunos y www.herasalud.com Internet S.L. considere ofrecer.
+La información que haya sido validada por los clientes depende exclusivamente de ellos. La que no ha sido validada proviene de fuentes públicas como son los listados y documentos publicitados por las diferentes compañías. No es en ningún momento labor de HERA INTERNET, S.L. el cumplimiento efectivo por ninguna de las partes de las obligaciones que se deriven de la utilización de este sitio web.
+Otros productos y servicios. Caso de comercialización de otros productos y servicios realizada a través del sitio web de HERA INTERNET, S.L., esta sociedad realiza únicamente una labor de intermediación comercial entre el usuario que adquiera el producto o servicio de que se trate en cada caso y el fabricante o distribuidor de dicho producto o servicio.
+Por consiguiente, la información sobre productos o servicios de esta naturaleza se considerará realizada directamente al usuario del sitio web por parte del proveedor del producto o servicio de que se trate en cada caso, que establecerá las condiciones específicas para cada producto o servicio, que serán facilitadas al usuario específica y convenientemente para cada producto o servicio contratado, y que en la medida de lo posible se contendrán en el presente sitio web.
+</p>
+<p>3.- <strong>Contraseñas para el uso del presente sitio web creado por HERA INTERNET, S.L. y facilitadas al cliente o al usuario por esta sociedad a través del propio sito web o por cualquier otro medio.</strong> Para el acceso a la utilización de algunas partes del presente sitio web, puede ser necesario contar con una o varias contraseñas. El usuario y/o el cliente se hace plenamente responsable de tratar de forma confidencial y custodiar adecuadamente las contraseñas que le sean proporcionadas a tal fin, evitando el acceso a las mismas de terceras personas no autorizadas expresamente por HERA INTERNET, S.L. El usuario y/o cliente acepta hacerse plenamente responsable de las consecuencias económicas y de otra naturaleza derivadas de cualquier utilización de este sitio web que se produzca mediante el uso de la contraseña del usuario del sitio web de HERA INTERNET, S.L., así como por la utilización de las contraseñas del usuario y/o cliente por terceros.
+</p><p>4.- <strong>Datos facilitados por el usuario a HERA INTERNET, S.L.</strong> Al contratar el usuario y/o cliente productos y/o servicios ofrecidos a través del presente sitio web, se pedirán una serie de datos al referido usuario, a fin de hacer posible dicha contratación y poder hacer debida entrega al usuario y/o cliente del producto y/o servicio contratado en las debidas condiciones.
+El usuario y/o cliente se compromete a que los datos que le sean solicitados y éste declare, sean verdaderos, completos y precisos, y se compromete asimismo a notificar a HERA INTERNET, S.L. cualquier cambio habido en los mismos a la mayor brevedad posible, a fin de evitar los problemas que pueden derivarse en caso de que HERA INTERNET, S.L. disponga de unos datos incorrectos o desfasados.
+</p><p>5.-<strong> Base de datos de usuarios del sitio web HERA INTERNET, S.L.</strong> El usuario de este sitio web acepta expresamente que los datos recogidos por HERA INTERNET, S.L. al contratar un usuario cualquiera de los productos o servicios ofertados en este sitio web, y los demás que se obtengan posteriormente, sean almacenados por HERA INTERNET, S.L. en una base de datos de carácter personal, base de datos cuya titularidad corresponderá a HERA INTERNET, S.L.
+Dichos datos serán utilizados por parte de HERA INTERNET, S.L. para facilitar información (incluyendo acciones de marketing), productos y/o servicios al usuario de que se trate en cada caso, utilización a la que el usuario presta asimismo su consentimiento expreso.
+HERA INTERNET, S.L. queda autorizado para, en su caso, ceder los datos a terceras empresas, con la finalidad de que estas realicen acciones de marketing dirigidas a la promoción de sus productos o servicios.
+De conformidad con lo regulado legalmente, se establece que los derechos de acceso, rectificación y cancelación de los datos recogidos en el fichero podrán ser ejercitados por el usuario dirigiéndose a:
+HERA INTERNET, S.L.
+Correo Electrónico: admin@herasalud.com</p>
+<p>6.- <strong>Centro de atención al cliente.</strong> Los usuarios del presente sitio web pueden disponer en el futuro de un servicio telefónico denominado Centro de Atención al Cliente cuya finalidad seria atender a los usuarios del sitio web acerca del funcionamiento del mismo, informar acerca de los productos o servicios disponibles en cada momento, etc.
+El número de teléfono al cual los usuarios del presente sitio web podrán dirigirse en cada caso para funcionamiento del sitio web, e información del contenido del mismo, incluidos los productos y servicios ofertados no está habilitado en este momento.
+</p><p>7.- <strong>Lo que se ofrece es lo que se ve.</strong> HERA INTERNET, S.L. ofrece a los usuarios la posibilidad de utilizar el presente sitio web "tal cual está". Si bien HERA INTERNET, S.L. realiza sus mejores esfuerzos para que el funcionamiento y las informaciones contenidas en este sitio web sean correctas en todo momento, es posible que en algún momento determinado contenga imprecisiones o erratas, o se produzca algún fallo de carácter técnico que dificulte o imposibilite el funcionamiento del sitio web, por lo cual HERA INTERNET, S.L. no garantiza implícita ni explícitamente el referido funcionamiento del sitio web o la información, contenido, software, materiales o productos incluidos en el mismo.
+En Especial HERA INTERNET, S.L. no es responsable de la falta de veracidad, completud, actualización y/o precisión de los datos o informaciones acerca de las ofertas, productos y/o servicios que se ofrecen a través del presente sitio web, ya que los mismos son facilitados a HERA INTERNET, S.L. por los proveedores de los productos y/o servicios ofertados en la web.
+Así mismo HERA INTERNET, S.L. no será en ningún caso responsable del incumplimiento o cumplimiento defectuoso por cualquier proveedor de otros productos y/o servicios ofertados al usuario a través de este sitio web de las obligaciones derivadas de la normativa en vigor y de los términos y condiciones de contratación del producto y/o servicio que se realice a través de este sitio web.
+HERA INTERNET, S.L. no será en ningún caso responsable del contenido o funcionamiento de otros sitios web a los que en algún caso pueda accederse por la inclusión de un vínculo o enlace en el presente sitio web, ni de los contenidos, servicios o productos ofrecidos desde los mismos, a no ser que estos otros sitios sean propiedad de HERA INTERNET, S.L.
+Todo usuario de este sitio web se compromete a mantener indemne a HERA INTERNET, S.L. de cualquier reclamación derivada de problemas surgidos por las causas descritas en el presente apartado.
+</p><p>8.- <strong>Propiedad de los contenidos del presente sitio web</strong>. Todos los contenidos del presente sitio web son propiedad de HERA INTERNET, S.L. o de los proveedores de los productos y/o servicios ofertados a través del sitio web, y están protegidos por las normas nacionales e internacionales de propiedad industrial e intelectual.
+Esta protección alcanza al montaje, compilación, diseño, configuración, software, textos, gráficos, logotipos, iconos, imágenes, archivos, vídeo, audio, etc.
+El usuario del sitio web se compromete a respetar estos derechos, y, en consecuencia, a no copiar, reproducir, modificar, distribuir, transmitir, publicar, exhibir o representar ninguno de los referidos contenidos del sitio web, ni a efectuar ninguna otra actividad que pudiera infringir los derechos de propiedad de HERA INTERNET, S.L., o demás proveedores de productos y/o servicios ofertados en el presente sitio web.
+</p><p>9.- <strong>Modificación de las presentes Condiciones Generales</strong>. HERA INTERNET, S.L. se reserva el derecho a modificar las presentes Condiciones Generales en cualquier momento, respetando los derechos adquiridos por los usuarios. Toda modificación será notificada a los usuarios a la mayor brevedad posible. Se considera notificación de la modificación al usuario la inserción del nuevo texto de las presentes Condiciones Generales en el presente sitio web. El uso del sitio web tras la modificación de las Condiciones Generales implicará su aceptación por parte del usuario.
+</p><p>10.- <strong>Ley aplicable y jurisdicción.</strong> Responsabilidad de HERA INTERNET, S.L. Las presentes Condiciones Generales se regirán por la legislación española, sometiéndose tanto HERA INTERNET, S.L. como los usuarios del sitio web, renunciando en lo menester a su propio fuero, a la jurisdicción de los Juzgados y Tribunales de la ciudad de Barcelona (España) para toda cuestión que pudiera surgir sobre la interpretación, cumplimiento o incumplimiento de las presentes Condiciones Generales y sus efectos; correrán a cargo de la parte infractora (con independencia del resarcimiento de daños) cuantos gastos y costas se ocasionen en cualquier clase de procedimiento que se siguiese; el concepto de costas comprenderá honorarios de Letrado y cuentas de Procurador, aun cuando su respectiva intervención no fuese procesalmente preceptiva.
+En caso de que con arreglo a lo establecido en las presentes Condiciones Generales y en la ley, HERA INTERNET, S.L. deba indemnizar a un usuario, la indemnización a percibir por éste no podrá sobrepasar en ningún caso el valor del producto o servicio cuya contratación por el usuario haya originado el nacimiento del derecho indemnizatorio a favor de éste.
+HERA INTERNET, S.L. indemnizará al usuario de que se trate únicamente en el caso de que los daños y perjuicios causados se deban a actuación negligente o dolosa de www.herasalud.com INTERNET , S.L., debidamente acreditada por el usuario reclamante.
+En ningún caso HERA INTERNET, S.L. será responsable por daños morales, lucro cesante y/o de cualesquiera daños consecuenciales o indirectos que pudiese sufrir el usuario.
+HERA INTERNET, S.L. no será responsable de las actuaciones llevadas a cabo directamente por los fabricantes, distribuidores, o proveedores de los productos o servicios ofertados a través de la web.
+</p><br> </div>
+      </div>  
+     
+  </div>
+</div>
+
+<div class="footer"><a href="contactar.html">Contactar</a> | <a href="condiciones_uso.html">Condiciones de Uso</a></div>
+ 
+       
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

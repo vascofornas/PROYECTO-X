@@ -1,3 +1,43 @@
+<?php
+	
+   
+ 
+    
+ $db_host = "localhost";
+ $db_name = "herasosj_hera";
+ $db_user = "herasosj_hera";
+ $db_pass =  "Papa020432";
+ 
+ 				
+
+
+// Create connection
+$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$link = new PDO("mysql:host=$db_host;dbname=$db_name",$db_user,$db_pass);
+$link -> exec("set names utf8");
+
+
+// assuming a named submit button
+if(isset($_GET['cod']))
+{
+
+	try {
+		$stmt = $link->prepare('SELECT `codigo_verificacion` FROM `tb_opiniones_doctor` WHERE codigo_verificacion = ?');
+		$stmt->bindParam(1, $_GET['cod']);
+		$stmt->execute();
+		while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
+		}
+	}
+	catch(PDOException $e) {
+		echo 'ERROR: ' . $e->getMessage();
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,15 +73,6 @@ body {
   
   
 }
-#footer {
-   position:fixed;
-   left:0px;
-   bottom:0px;
-   height:30px;
-   width:100%;
-   background:#999;
-}
-
 
 
 /* Remove margins and padding from the list, and add a black background color */
@@ -156,19 +187,31 @@ ul.topnav li.icon {display: none;}
     
      
       <div class="col-sm-12 col-md-10 col-md-offset-1">
-              <div style="color:#ffffff"><h2>Ayudemos y colaboremos con la Comunidad.</h2>
+              <div style="color:#ffffff"><h4>
+<?
+	if($stmt->rowCount() > 0){
+		echo "EMAIL VALIDADO. GRACIAS POR OPINAR EN HERASALUD.COM!";
+		echo '<a href="index.html"></a>';
+		
+		$stmt = $link->prepare('UPDATE tb_opiniones_doctor SET  `verificado` = 1 WHERE codigo_verificacion = ?');
+		$stmt->bindParam(1, $_GET['cod']);
+		$stmt->execute();
+		
+	} else {
+		echo "TU EMAIL NO HA PODIDO SER VALIDADO.";
+	}
 
-<H4>Recomienda doctores o instituciones para que otros se enteren y puedan acceder a ellos.
 
-Busca a los doctores, hospitales, farmacias y laboratorios más recomendados en el país,
+}
+?>
 
-tu estado o ciudad.</H4><br> </div>
+   </H4> </div>
       </div>  
      
   </div>
 </div>
 
-<div class="footer"><a href="contactar.html">Contactar</a> | <a href="condiciones_uso.html">Condiciones de Uso</a></div>
+
        
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
