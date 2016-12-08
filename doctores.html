@@ -17,14 +17,6 @@
     <!-- Custom CSS -->
     <style>
     
-#footer {
-   position:fixed;
-   left:0px;
-   bottom:0px;
-   height:30px;
-   width:100%;
-   background:#999;
-}
 
 html, body{
   height: 100%;
@@ -42,75 +34,28 @@ body {
   
 }
 
-
-/* Remove margins and padding from the list, and add a black background color */
-ul.topnav {
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    width: 100%;
-    display: inline-block;
-    
-  
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#999;
 }
 
-/* Float the list items side by side */
-ul.topnav li {
-	margin: 10;
-    padding: 10;
-    display: inline;
-    
-  }
-
-/* Style the links inside the list items */
-ul.topnav li a {
-    display: inline-block;
-    color: #f2f2f2;
-    text-align: center;
-   
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 40px;
-   
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+.center-boton{
+	margin:0 auto;
+	width:200px;
+	height:100px;
 	
 }
-
-/* Change background color of links on hover */
-/* ul.topnav li a:hover {background-color: #fff;}
-
-/* Hide the list item that contains the link that should open and close the topnav on small screens */
-ul.topnav li.icon {display: none;}
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width:680px) {
-  ul.topnav li:not(:first-child) {display: none;}
-  ul.topnav li.icon {
-  float: right;
- 
-    display: inline-block !important;
-  }
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
-@media screen and (max-width:680px) {
-  ul.topnav.responsive {position: relative;}
-  ul.topnav.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  ul.topnav.responsive li {
-    float: none;
-    display: inline;
-  }
-  ul.topnav.responsive li a {
-    display: block;
-    text-align: left;
-    z-index : 1;
-  }
-
-.top-buffer { margin-top:50px; }
-
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -125,38 +70,43 @@ ul.topnav li.icon {display: none;}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script>
-  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-  function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-          x.className += " responsive";
-      } else {
-          x.className = "topnav";
-      }
-  }
-  
-  </script>
+ 
+
+ 
 </head>
-</head>
+
 
 <body>
 
-<div class="links">
-        <ul class="topnav" id="myTopnav" >
-      <li><a href="index.html"><img class="img-responsive" width="60px" src="imagenes/botones/logo_hera.png" /></a></li>
-      <li><a href="doctores.html"><img class="img-responsive" width="180px" src="imagenes/botones/doctores_boton.png" /></a></li>
-      <li><a href="#news"><img class="img-responsive" width="180px" src="imagenes/botones/hospitales_boton.png" /></a></li>
-      <li><a href="#news"><img class="img-responsive" width="180px" src="imagenes/botones/farmacias_boton.png" /></a></li>
-      <li><a href="#news"><img class="img-responsive" width="180px" src="imagenes/botones/laboratorios_boton.png" /></a></li>
-      <li class="icon">
-        <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
-      </li>
-    </ul>
-    </div>
 
+<div class="bs-example">
+    <nav role="navigation" class="navbar navbar-default">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand">HeraSalud</a>
+        </div>
+        <!-- Collection of nav links and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Inicio</a></li>
+                <li><a href="doctores.html">Doctores</a></li>
+                <li><a href="#">Hospitales</a></li>
+                <li><a href="#">Farmacias</a></li>
+                <li><a href="#">Laboratorios</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Contactar</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
 
    <div class="container ">
   	<div class="row" >
@@ -174,7 +124,7 @@ ul.topnav li.icon {display: none;}
     <div class="row" align="center">
     <br>
         <div class="col-xs-6" >
-             <a href="index.html"><img class="img-responsive"  align="right" width="180px"   src="imagenes/botones/buscar_boton.png" /></a>
+             <a href="doctores_buscar.html"><img class="img-responsive"  align="right" width="180px"   src="imagenes/botones/buscar_boton.png" /></a>
         </div>
         <div class="col-xs-6">
              <a href="doctores_opinar.html"><img class="img-responsive" align="left" width="180px"   src="imagenes/botones/opinar_boton.png" /></a>
