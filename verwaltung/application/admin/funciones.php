@@ -2,9 +2,9 @@
 include "../config.php";
 
 function get_agencia($agencia){
-$query=mysql_query("SELECT * FROM tb_agencias WHERE id_agencia = '".$agencia."'") ;
+$query=mysqli_query($link,"SELECT * FROM tb_agencias WHERE id_agencia = '".$agencia."'") ;
 $data = array();
-while($r = mysql_fetch_assoc($query)) {
+while($r = mysqli_fetch_assoc($query)) {
 	$data[] = $r;
 }
 $i=0;

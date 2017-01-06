@@ -5,7 +5,7 @@ include 'funciones.php';?>
 <head>
   <meta charset="ISO-8859-1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Mi Asesor Automotriz</title>
+  <title>HERA - Zona Administración</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -77,12 +77,11 @@ include 'funciones.php';?>
             <!-- Content Header (Page header) -->
             <section class="content-header">
            
-              <IMG SRC="login/logoappauto.png" WIDTH=80 HEIGHT=80 align="center">
-            <h1>ZONA ADMINISTRACION / <?php 
-                    echo get_agencia($_SESSION['agencia'])?></h1>
+             
+            <h1>ZONA ADMINISTRACION</H1> 
               <h1>
                 
-                <small>Mi Asesor Automotriz  </small>
+                <small>Hera Salud  </small>
               </h1>
               <ol class="breadcrumb">
                 <li><a href="index"><i class="fa fa-dashboard"></i> Portada</a></li>
@@ -263,7 +262,7 @@ include 'funciones.php';?>
 
 
 
-
+<br><br><br><br><br><br><br><br><br><br>><br><br><br><br>
             </section><!-- /.content -->
 
             <!-- ========================================================================================================== -->
