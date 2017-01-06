@@ -43,11 +43,14 @@ if($crud=='N'){
 		$result['result']=1;
 	}
 }else if($crud == 'E'){
-	mysql_query("update members set nombre='$nombre',apellidos='$apellidos',nivel_usuario='$nivel_usuario',
-    agencia_usuario='$agencia_usuario',email='$email',cargo_usuario='$cargo_usuario',licencia_usuario='$licencia_usuario',
-    verified='$verified',tel='$tel' where id= '".$id."'");
-	if(mysql_error()){
-		$result['error']=mysql_error();
+	mysqli_query($link,"update tb_opiniones_doctor set nombre_doctor='$nombre',apellidos_doctor='$apellidos',
+	especialidad_doctor='$especialidad', direccion_doctor ='$direccion',tel_doctor='$telefono',
+	ciudad_doctor='$ciudad',estado_doctor='$estado',pais_doctor='$pais',
+	atencion='$atencion',precio='$precio',instalaciones='$instalaciones',puntualidad='$puntualidad',lo_recomiendas='$lorecomendarias',
+	eficiencia='$eficiencia',comentarios='$comentarios',nombre_usuario='$usuario',email_usuario='$email',
+	verificado='$verificado' where id_opinion_doctor= '".$id."'");
+	if(mysqli_error($link)){
+		$result['error']=mysql_error($link);
 		$result['result']=0;
 	}else{
 		$result['error']='';

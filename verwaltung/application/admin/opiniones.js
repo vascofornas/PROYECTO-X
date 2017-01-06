@@ -68,12 +68,12 @@ $(document).ready( function ()
       var id = $(this).attr("id");
       var nombre = $(this).attr("nombre");
       swal({   
-        title: "Borrar Usuario?",   
-        text: "Borrar usuario : "+nombre+" ?",   
+        title: "Borrar Opinión?",   
+        text: "Borrar opinión : "+nombre+" ?",   
         type: "warning",   
         showCancelButton: true,   
         confirmButtonColor: "#DD6B55",   
-        confirmButtonText: "Delete",   
+        confirmButtonText: "Borrar",   
         closeOnConfirm: true }, 
         function(){   
           var value = {
@@ -81,14 +81,14 @@ $(document).ready( function ()
           };
           $.ajax(
           {
-            url : "delete_usuario.php",
+            url : "delete_opinion.php",
             type: "POST",
             data : value,
             success: function(data, textStatus, jqXHR)
             {
               var data = jQuery.parseJSON(data);
               if(data.result ==1){
-                $.notify('Usuario borrado correctamente');
+                $.notify('Opinion borrada correctamente');
                 var table = $('#table_cust').DataTable(); 
                 table.ajax.reload( null, false );
               }else{
@@ -238,17 +238,32 @@ $(document).ready( function ()
       };
       $.ajax(
       {
-        url : "get_usuario.php",
+        url : "get_opinion.php",
         type: "POST",
         data : value,
         success: function(data, textStatus, jqXHR)
         {
           var data = jQuery.parseJSON(data);
           $("#crudmethod").val("E");
-          $("#txtid").val(data.id);
-          $("#txtnombre").val(data.nombre);
-          $("#txtapellidos").val(data.apellidos);
-          
+          $("#txtid").val(data.id_opinion_doctor);
+          $("#txtnombre").val(data.nombre_doctor);
+          $("#txtapellidos").val(data.apellidos_doctor);
+             $("#txtespecialidad").val(data.especialidad_doctor);
+        $("#txtdireccion").val(data.direccion_doctor);
+        $("#txttelefono").val(data.tel_doctor);
+        $("#txtciudad").val(data.ciudad_doctor);
+        $("#txtestado").val(data.estado_doctor);
+        $("#txtpais").val(data.pais_doctor);
+        $("#txtatencion").val(data.atencion);
+        $("#txtprecio").val(data.precio);
+        $("#txtinstalaciones").val(data.instalaciones);
+        $("#txtlorecomendarias").val(data.lo_recomiendas);
+        $("#txtpuntualidad").val(data.puntualidad);
+        $("#txteficiencia").val(data.eficiencia);
+         $("#txtcomentarios").val(data.comentarios);
+        $("#txtusuario").val(data.nombre_usuario);
+        $("#txtemail").val(data.email_usuario);
+        $("#txtverificado").val(data.verificado);
          
 
           $("#modalcust").modal('show');

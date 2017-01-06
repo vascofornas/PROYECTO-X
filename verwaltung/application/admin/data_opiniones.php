@@ -10,7 +10,7 @@ $i=0;
 foreach ($data as $key) {
 		// add new button
 	$data[$i]['button'] = '<button type="submit" id="'.$data[$i]['id_opinion_doctor'].'" class="btn btn-primary btnedit" ><i class="fa fa-edit"></i></button> 
-							   <button type="submit" id="'.$data[$i]['id_opinion_doctor'].'" nombre="'.$data[$i]['nombre_doctor'].'" class="btn btn-primary btnhapus" ><i class="fa fa-remove"></i></button>';
+							   <button type="submit" id="'.$data[$i]['id_opinion_doctor'].'" nombre="'.$data[$i]['nombre_doctor'].'" class="btn btn-danger btnhapus" ><i class="fa fa-remove"></i></button>';
 	$i++;
 }
 $datax = array('data' => $data);

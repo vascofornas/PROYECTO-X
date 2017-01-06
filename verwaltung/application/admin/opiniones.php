@@ -5,7 +5,7 @@ include 'funciones.php';?>
 <head>
   <meta charset="ISO-8859-1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Usuarios</title>
+  <title>Opiniones</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -97,7 +97,7 @@ include 'funciones.php';?>
                  <button type="submit" class="btn btn-primary " id="btnadd" name="btnadd"><i class="fa fa-plus"></i> Nueva Opinión</button>
                  <br>
                  <br>
-                 <div class="box-body" style="max-width:900px;" >
+                 <div class="box-body" style="max-width:1200px;" >
                   <table id="table_cust" class="table table-striped table-bordered table-hover">
                     <thead>
                       <tr class="tableheader">

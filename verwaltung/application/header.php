@@ -3,7 +3,7 @@
               <!-- mini logo for sidebar mini 50x50 pixels -->
               <span class="logo-mini"><b>A</b>LT</span>
               <!-- logo for regular state and mobile devices -->
-              <span class="logo-lg"><b>MAA App </b>ADMIN</span>
+              <span class="logo-lg"><b>HERA Salud </b>ADMIN</span>
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
@@ -119,7 +119,7 @@
                           <a href="#" class="btn btn-default btn-flat">Perfil</a>
                         </div>
                         <div class="pull-right">
-                          <a href="login/logout.php" class="btn btn-default btn-flat">Cerrar Sesión</a>
+                          <a href="login/logout.php" class="btn btn-default btn-flat">Cerrar Sesiï¿½n</a>
                         </div>
                       </li>
                     </ul>
